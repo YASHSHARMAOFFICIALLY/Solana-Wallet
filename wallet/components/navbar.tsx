@@ -6,11 +6,11 @@ const Navbar = () =>{
     return (
         <div className="p-6 border-b rounded-xl border-slate-200 shadow-sm">
             <div className="px-8  flex  justify-between">
-                <Wallet size={40}></Wallet>
+                <Wallet size={40} className="cursor-pointer"></Wallet>
                 <Link href="https://github.com/YASHSHARMAOFFICIALLY">
-                <Button>
+                <Button className="cursor-pointer text-black">
                     <Github/>
-                    <span className="font-bold text-md">Github</span>
+                    <span className="font-bold text-md text-black">Github</span>
                 </Button>
                 </Link>
                 
