@@ -5,13 +5,15 @@ import { useState } from "react";
 
 type Wallet ={
     id:number,
-    publickey:string,
-    privatekey:string
+    publicKey:string,
+    privateKey:string
 }
 const WalletCard = ({
     wallet,
     deletewallet,
+    mnemonic,
 }:{
+    mnemonic:string
     wallet:Wallet,
     deletewallet:(id:number)=>void
 })=>{
@@ -33,7 +35,7 @@ const WalletCard = ({
                     <div className="flex flex-col">
                         <h2 className="font-bold text-sm md:text-base pb-2">Public Key</h2>
                          <p className="text-sm md:text-base break-all">
-                          
+                          {wallet.publicKey}
                              </p>
                     </div>
                     <div className="flex justify-between items-center">
@@ -41,7 +43,7 @@ const WalletCard = ({
                             <h2 className="font-bold text-sm md:text-base pb-1">Private Key</h2>
                             <p className="text-sm md:text-base break-all">
                                 {showPrivateKey ? (
-                                wallet.privatekey
+                                wallet.privateKey
                                 ) : (
                                     <div className="flex font-thin">
                                         {/* {"•".repeat(wallet.privatekey.length)} */}

@@ -6,6 +6,9 @@ import {
 } from "bip39";
 import { derivePath } from "ed25519-hd-key";
 import { useState, useEffect } from "react";
+import Mnemonicard from "./mnemonicCard";
+import { Button } from "./ui/button";
+import WalletCard from "./Walletcard";
 
 
 type Wallet = {
@@ -35,8 +38,8 @@ const WalletGenerator = ()=>{
         const keypair = nacl.sign.keyPair.fromSeed(derived.key);
         const walletData = {
              id: nextId,
-             publickey: Buffer.from(keypair.publicKey).toString("hex"),
-            privatekey: Buffer.from(keypair.secretKey).toString("hex"),
+             publicKey: Buffer.from(keypair.publicKey).toString("hex"),
+            privateKey: Buffer.from(keypair.secretKey).toString("hex"),
          };
         const updatedWallets = [...wallet, walletData];
         setwallet(updatedWallets);
@@ -47,7 +50,7 @@ const WalletGenerator = ()=>{
         localStorage.removeItem("mnemonic")
         localStorage.removeItem("wallet")
         setmnmonic(""),
-        setwallet([]),
+        setwallet([])
     }
 
     function deletewallet(id:number){
@@ -57,8 +60,34 @@ const WalletGenerator = ()=>{
     }
     return(
         <div>
-
+            <div>
+                {mnemonic && wallet.length>0 && <Mnemonicard mnemonic= {mnemonic}></Mnemonicard>}
+            </div>
+            <div className="p-6">
+                <div className="flex px-2 h-14 rounded-xl shadow-md bg-slate-50 border border-slate-400 justify-between items-center">
+                <h1 className="sm:font-bold sm:text-4xl font-bold">Solana Wallet</h1>
+                <div className="flex gap-3">
+                    <Button onClick={createWallet}>Add Wallet</Button>
+                    <Button onClick={handleclearwallet} className="bg-red-500">Clear wallet</Button>
+                    </div>
+                </div>
+            <div className="">
+          {wallet.length > 0 ? (
+            wallet.map((wallet) => (
+              <WalletCard
+                key={wallet.id} // Use wallet.id as key for better performance
+                mnemonic={mnemonic!}
+                wallet={wallet}
+                deletewallet={deletewallet} // Pass deleteWallet function to WalletCard
+              />
+            ))
+          ) : (
+            <div className="font-bold p-10">No wallets created</div>
+          )}
         </div>
-    )
-}
+      </div>
+    </div>
+  );
+};
+          
 export default WalletGenerator
