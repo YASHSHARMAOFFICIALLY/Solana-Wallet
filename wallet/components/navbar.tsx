@@ -5,7 +5,7 @@ import Link from "next/link";
 const Navbar = () =>{
     return (
         <div className="p-6 border-b rounded-xl border-slate-200 shadow-sm">
-            <div className="px-8 flex justify-between">
+            <div className="px-8  flex  justify-between">
                 <Wallet size={40}></Wallet>
                 <Link href="https://github.com/YASHSHARMAOFFICIALLY">
                 <Button>

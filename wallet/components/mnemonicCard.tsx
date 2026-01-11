@@ -32,7 +32,7 @@ const Mnemonicard = ({ mnemonic }: { mnemonic: string })=>{
                 <h1 className="sm:text-4xl text-xl font-bold"> Secret Recovery Phrase</h1>
                 <h2 className="text-slate-600 pb-5">Save these words in a safe place do not share</h2>
             </div>
-            <div className="grid grid-cols-2 sm:grid-col-4 gap-2 rounded-xl">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 rounded-xl">
                 {words.map((word,index)=>{
                     return(
                     <h1

@@ -30,10 +30,36 @@ const WalletCard = ({
                         <Trash onClick={() => deletewallet(wallet.id)} color="red" />
                         </div>
                     </div>
+                    <div className="flex flex-col">
+                        <h2 className="font-bold text-sm md:text-base pb-2">Public Key</h2>
+                         <p className="text-sm md:text-base break-all">
+                          
+                             </p>
+                    </div>
+                    <div className="flex justify-between items-center">
+                        <div>
+                            <h2 className="font-bold text-sm md:text-base pb-1">Private Key</h2>
+                            <p className="text-sm md:text-base break-all">
+                                {showPrivateKey ? (
+                                wallet.privatekey
+                                ) : (
+                                    <div className="flex font-thin">
+                                        {/* {"•".repeat(wallet.privatekey.length)} */}
+                                     </div>
+                                         )}
+                                            </p>
+                                        </div>
+                                              <div className="pr-2 cursor-pointer" onClick={togglePrivateKeyVisibility}>
+                                                  {showPrivateKey ? <Eye /> : <EyeOff />}
+                                                          </div>
+                        </div>
+
+                    </div>
+                    <div> private key</div>
                 </div>
             </div>
 
-        </div>
+        
     )
 }
 export default WalletCard
