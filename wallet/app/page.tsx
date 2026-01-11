@@ -1,3 +1,4 @@
+import Footer from "@/components/footer";
 import Mnemonicard from "@/components/mnemonicCard";
 import WalletCard from "@/components/Walletcard";
 
@@ -7,6 +8,7 @@ export default function Home(){
         <div>
             <Mnemonicard/>
             <WalletCard/>
+            <Footer/>
         </div>
     )
 }
