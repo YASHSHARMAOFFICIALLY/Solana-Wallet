@@ -30,15 +30,20 @@ const Mnemonicard = ({ mnemonic }: { mnemonic: string })=>{
         <div className="w-full p-10  flex flex-col justify-center">
             <div>
                 <h1 className="sm:text-4xl text-xl font-bold"> Secret Recovery Phrase</h1>
-                <h2 className="text-slate-600 pb-5">Save these words in a safe place do not share</h2>
+                <h2 className="text-red-700 pb-5">Make sure no one is watching you 👀</h2>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 rounded-xl">
                 {words.map((word,index)=>{
                     return(
                     <h1
                     key = {index}
-                     className="bg-foreground/5 hover:bg-slate-300 p-3 w-40 text-center rounded-xl"
+                   
+                     className="relative flex items-center justify-center bg-foreground/5 hover:bg-slate-300 p-8 h-24 text-center rounded-xl"
                     >
+                        <span className="absolute top-10  left-30 text-[13px] font-bold tracking-tighter uppercase opacity-50 text-muted-foreground font-mono">
+                       
+                        {String(index + 1).padStart(2, '0')}
+                            </span>
                         {word}
                     </h1>
                     )

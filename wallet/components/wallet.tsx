@@ -59,15 +59,15 @@ const WalletGenerator = ()=>{
         localStorage.setItem("wallet",JSON.stringify(updatedWallets))
     }
     return(
-        <div>
+        <div >
             <div>
-                {mnemonic && wallet.length>0 && <Mnemonicard mnemonic= {mnemonic}></Mnemonicard>}
+                {mnemonic && wallet.length>0 && <Mnemonicard mnemonic= {mnemonic} ></Mnemonicard>}
             </div>
             <div className="p-6">
-                <div className="flex px-2 h-14 rounded-xl shadow-md bg-slate-50 border border-slate-400 justify-between items-center">
+                <div className="flex px-2 h-14 rounded-xl shadow-md bg-background border border-slate-400 justify-between items-center">
                 <h1 className="sm:font-bold sm:text-4xl font-bold">Solana Wallet</h1>
                 <div className="flex gap-3">
-                    <Button className="cursor-pointer" onClick={createWallet}>Add Wallet</Button>
+                    <Button className="cursor-pointer bg-blue-500" onClick={createWallet}>Add Wallet</Button>
                     <Button onClick={handleclearwallet} className="bg-red-500 cursor-pointer">Clear wallet</Button>
                     </div>
                 </div>
