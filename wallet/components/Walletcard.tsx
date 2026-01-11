@@ -30,7 +30,6 @@ const WalletCard = ({
                         <Trash onClick={() => deletewallet(wallet.id)} color="red" />
                         </div>
                     </div>
-                    
                 </div>
             </div>
 
