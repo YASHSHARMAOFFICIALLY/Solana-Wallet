@@ -38,9 +38,14 @@ const Mnemonicard = ({ mnemonic }: { mnemonic: string })=>{
                     <h1
                     key = {index}
                    
-                     className="relative flex items-center justify-center bg-foreground/5 hover:bg-slate-300 p-8 h-24 text-center rounded-xl"
+                     className="flex items-center justify-start gap-2 px-3 py-2 rounded-md 
+                     bg-background text-foreground  bg-destructive 
+                   bg-zinc-200 dark:bg-zinc-700 text-sm font-medium shadow-sm 
+                 h-12 w-full sm:w-auto min-w-[100px] 
+                 transition-all duration-300 ease-in-out 
+                 hover:bg-zinc-300 dark:hover:bg-zinc-600 cursor-pointer"
                     >
-                        <span className="absolute top-10  left-30 text-[13px] font-bold tracking-tighter uppercase opacity-50 text-muted-foreground font-mono">
+                        <span className="   text-[13px] font-bold tracking-tighter uppercase opacity-50 text-muted-foreground font-mono">
                        
                         {String(index + 1).padStart(2, '0')}
                             </span>
