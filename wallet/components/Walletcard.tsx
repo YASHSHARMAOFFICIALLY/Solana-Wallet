@@ -55,7 +55,6 @@ const WalletCard = ({
                                                   {showPrivateKey ? <Eye /> : <EyeOff />}
                                                           </div>
                         </div>
-
                     </div>
                     <div> private key</div>
                 </div>

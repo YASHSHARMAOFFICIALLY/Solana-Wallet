@@ -6,6 +6,7 @@ import { toast } from "sonner"
 const Mnemonicard = ({ mnemonic }: { mnemonic: string })=>{
    
      const [words, setWords] = useState<string[]>([]);
+     
       useEffect(() => {
         if (mnemonic) {
             const mnemonicWords = mnemonic.split(" ");
@@ -40,12 +41,12 @@ const Mnemonicard = ({ mnemonic }: { mnemonic: string })=>{
                    
                      className="flex items-center justify-start gap-2 px-3 py-2 rounded-md 
                      bg-background text-foreground  bg-destructive 
-                   bg-zinc-200 dark:bg-zinc-700 text-sm font-medium shadow-sm 
-                 h-12 w-full sm:w-auto min-w-[100px] 
-                 transition-all duration-300 ease-in-out 
-                 hover:bg-zinc-300 dark:hover:bg-zinc-600 cursor-pointer"
+                     bg-zinc-200 dark:bg-zinc-700 text-sm font-medium shadow-sm 
+                     h-12 w-full sm:w-auto min-w-[100px] 
+                    transition-all duration-300 ease-in-out 
+                     hover:bg-zinc-300 dark:hover:bg-zinc-600 cursor-pointer"
                     >
-                        <span className="   text-[13px] font-bold tracking-tighter uppercase opacity-50 text-muted-foreground font-mono">
+                        <span className="text-[13px] font-bold tracking-tighter uppercase opacity-50 text-muted-foreground font-mono">
                        
                         {String(index + 1).padStart(2, '0')}
                             </span>

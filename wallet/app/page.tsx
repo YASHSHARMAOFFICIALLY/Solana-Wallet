@@ -10,6 +10,7 @@ export default function Home(){
         <div>
             <ThemeProvider attribute="class" defaultTheme="light">
             <WalletGenerator/>
+             
             <Footer/>
             </ThemeProvider>
         </div>

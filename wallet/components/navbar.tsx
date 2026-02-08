@@ -17,7 +17,7 @@ const Navbar = () =>{
     if (!mounted) return null;
     const isDark = theme === "dark"
     return (
-        <div className="sticky z-50 top-0  bg-background/95 backdrop-blur p-6 border-b rounded-xl  shadow-sm bg-background text-foreground border-border ">
+        <div className="sticky z-50 top-0  bg-background/95 backdrop-blur p-6 border-b rounded-xl  shadow-sm bg-background text-foreground border-border">
             <div className="px-8  flex  justify-between">
                 
                 <div className="flex  items-center gap-4  text-foreground">
