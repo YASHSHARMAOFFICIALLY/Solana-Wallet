@@ -1,10 +1,10 @@
 import Link from "next/link";
 import React from "react";
 
-const Footer = () => {
+export default function Footer (){
   return (
-    <section className=" bottom-0 w-full  max-w  mx-auto px-4  py-6 border-t">
-      <div className="flex  justify-center ">
+    <section className="  w-full     py-6 border-t   ">
+      <div className="flex  justify-center container mx-auto ">
         <p className="text-primary tracking-tight">
           Designed and Developed by{" "}
           <Link href={"https://github.com/YASHSHARMAOFFICIALLY"} className="font-bold">
@@ -25,4 +25,3 @@ const Footer = () => {
   );
 };
 
-export default Footer;
