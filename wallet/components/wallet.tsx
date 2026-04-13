@@ -93,12 +93,12 @@ const WalletGenerator = () => {
   }
 
   return (
-    <div>
+    <div >
       <div>
         {mnemonic && wallets.length > 0 && <Mnemonicard mnemonic={mnemonic} />}
       </div>
       <div className="p-6">
-        <div className="flex px-2 h-14 rounded-xl shadow-md bg-background border border-slate-400 justify-between items-center">
+        <div className="flex px-2 h-14 rounded-xl shadow-md  border border-slate-400 justify-between items-center">
           <h1 className="sm:font-bold sm:text-4xl font-bold">Solana Wallet</h1>
           <div className="flex gap-3">
             <Button className="cursor-pointer bg-blue-500" onClick={createWallet}>

@@ -1,18 +1,22 @@
-
 @import "tailwindcss";
+
+/* 1. Define your CSS variables as before */
 @layer base {
   :root {
-    --background: 0 0% 100%;       /* White */
-    --foreground: 222.2 84% 4.9%;  /* Near Black */
-    /* ... other variables */
-     --destructive: red-500
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --destructive: 0 84% 60%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;  /* Near Black */
-    --foreground: 210 40% 98%;     /* Near White */
-    /* ... other variables */
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
   }
- 
 }
 
+/* 2. ✅ ADD THIS — maps variables to Tailwind utility classes */
+@theme {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-destructive: hsl(var(--destructive));
+}

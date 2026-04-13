@@ -23,8 +23,8 @@ const WalletCard = ({
     setShowPrivateKey((prev) => !prev);
   };
     return(
-        <div className="flex">
-            <div className="mt-2 p-5 shadow-2xl rounded-xl mx-2 w-full bg-background ">
+        <div className="flex ">
+            <div className="mt-2 p-5 shadow-2xl rounded-xl mx-2 w-full  ">
                 <div className="flex flex-col gap-3">
                     <div className="flex justify-between">
                          <h1 className="font-bold text-lg md:text-xl">Wallet</h1>
